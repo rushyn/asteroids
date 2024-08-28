@@ -6,6 +6,7 @@ class player(CircleShape):
         super().__init__(x, y, radius)
         self.position = pygame.Vector2(x, y)
         self.rotation = 0
+        self.containers = 0
 
 
     # in the player class
@@ -18,7 +19,6 @@ class player(CircleShape):
         return [a, b, c]
     
     def draw(self, screen):
-        print("this should run")
         pygame.draw.polygon(screen, "white", self.triangle(), 2)
 
     def rotate(self, dt):
