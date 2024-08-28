@@ -12,17 +12,15 @@ def main():
 
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-
     clock = pygame.time.Clock()
     dt = 0
-
-    game_player = player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, PLAYER_RADIUS)
-
+    
     updateble = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
 
-    updateble.add(game_player)
-    drawable.add(game_player)
+    player.containers = (updateble, drawable)
+
+    game_player = player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
     run = 1
     while run == 1:
