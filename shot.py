@@ -1,13 +1,12 @@
 from circleshape import *
 from constants import *
 
-class Asteroid(CircleShape):
-    def __init__(self, x, y, radius):
+class shot(CircleShape):
+    def __init__(self, position, radius):
         #print("__init__")
-        self.position = pygame.Vector2(x, y)
+        self.position = position
         self.radius = radius
-        self.velocity = 50
-        super().__init__(x, y, PLAYER_RADIUS)
+        super().__init__(self.position.x, self.position.y, self.radius)
 
     def draw(self, screen):
         pygame.draw.circle(screen, "white", self.position, self.radius, 2)

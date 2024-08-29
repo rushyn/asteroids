@@ -14,12 +14,12 @@ class CircleShape(pygame.sprite.Sprite):
         self.radius = radius
 
     def draw(self, screen):
-        print("this should not run")
+        #print("this should not run")
         # sub-classes must override
         pass
 
     def update(self, dt):
-        print("this should not run")
+        #print("this should not run")
         # sub-classes must override
         pass
 
