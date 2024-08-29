@@ -27,3 +27,7 @@ class CircleShape(pygame.sprite.Sprite):
         if (self.radius + CircleShape.radius) > self.position.distance_to(CircleShape.position):
             return True
         return False
+    
+    def kill(self):
+        pygame.sprite.Sprite.kill(self)
+        
