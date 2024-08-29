@@ -47,16 +47,21 @@ def main():
         for unit in drawable:
             unit.draw(screen)
 
-        for unit in asteroids:
-            if game_player.collison(unit) == True:
+        for asteroid in asteroids:
+            if game_player.collison(asteroid) == True:
                 print("Game over!")
                 event.type == pygame.QUIT
                 return
+            for bullet in bullets:
+                if asteroid.collison(bullet) == True:
+                    pygame.sprite.Sprite.kill(asteroid)
+                    pygame.sprite.Sprite.kill(bullet)
 
 
         pygame.display.flip()
         
         dt = (clock.tick(60)) / 1000
+        
 
         clock.tick(60)
 
