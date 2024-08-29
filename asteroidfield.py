@@ -35,7 +35,7 @@ class AsteroidField(pygame.sprite.Sprite):
     def spawn(self, radius, position, velocity):
         asteroid = Asteroid(position.x, position.y, radius)
         asteroid.velocity = velocity
-        print(asteroid.velocity)
+        #print(asteroid.velocity)
 
     def update(self, dt):
         self.spawn_timer += dt
